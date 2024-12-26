@@ -25,7 +25,6 @@ const Bot = () => {
 
     dispatch(setNodes([...nodes, newNode]));
   };
-  console.log(nodes);
   return (
     <section className="flex h-full min-h-screen">
       <DndContext onDragEnd={handleDrop}>

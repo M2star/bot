@@ -10,13 +10,15 @@ import {
 } from "@/components/ui/card";
 import { MdMessage } from "react-icons/md";
 import { Button } from "../ui/button";
-import { Text } from "./text";
+import { TextAndButton } from "./textandbutton";
 import { IoClose } from "react-icons/io5";
 import { FaRegClone } from "react-icons/fa";
 import { MediaUploader } from "./media";
 import { useDispatch } from "react-redux";
 import { removeNodes } from "@/redux/flow-slice/flowSlice";
 import { List } from "./list";
+import Text from "./text";
+import MainCard from "./main-card";
 
 export function FlowCustomeCard({ data, id  }) {
   const dispatch = useDispatch()
@@ -43,9 +45,11 @@ export function FlowCustomeCard({ data, id  }) {
           </div>
         </CardHeader>
         <CardContent className="max-w-96 w-96 space-y-4">
-          <Text />
+          <MainCard />
+          {/* <Text />
+          <TextAndButton />
           <MediaUploader />
-          <List />
+          <List /> */}
         </CardContent>
         <CardFooter className="px-0">
           <Button variant="outline" className="w-full text-xs space-x-2">
